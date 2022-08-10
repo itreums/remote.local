@@ -1,0 +1,936 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html,body{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(126, 126, 126);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+.menu_bar{
+    border-top: 2px solid #000000;
+    position: relative;
+    bottom: 0;
+    background-color: #181818;
+    height: 50px;
+    width: 300px;
+    margin-left: auto;
+    color: beige;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+
+}
+.menu_bar button{
+    width: 50px;
+    border:none;
+    cursor: pointer;
+    background: none;
+    color: azure;
+}
+button{
+    cursor: pointer;
+}
+.info_remote_channel{
+    margin-left: 15px;
+    padding-bottom: 10px;
+    /* text-align: right; */
+    color: white;
+}
+.info_remote_tabs{
+    
+    padding-bottom: 10px;
+    /* text-align: right; */
+    color: white;
+}
+.menu_bar button i{
+    font-size: 18px;
+}
+
+.status{
+    padding: 10px 10px 0px 10px;
+    color: rgb(0, 0, 0);
+}
+.panel{
+    overflow: hidden;
+
+    background-color: #3a3a3a;
+    width: 300px;
+    height: 500px;
+    max-width: 300px;
+    max-height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    /* overflow-y: auto; */
+    overflow-x: hidden;
+}
+.options_panel{
+
+    margin-top: 10px;
+    transition: all 1s;
+}
+.settingPanel{
+    visibility: hidden;
+    height: 0;
+    margin-top: 0px;
+    top: 15px;
+    
+}
+.options_panel button{
+    margin-right: 15px;
+}
+.wrap_remote{
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    
+    position: relative;
+    display: inline-flex;
+
+    right: 0;
+    transition: right 0.5s;
+}
+.app_list_youtube_active_video{
+
+   border: 2px solid #97dff3;
+    /* overflow: auto; */
+    border-radius: 10px;
+    margin: 10px 10px 0 10px;
+    background: #404040;
+    box-shadow: inset 0px 0px 3px 1px black;
+    padding: 4px;
+    color: white;
+    font-family: 'Roboto';
+}
+ 
+.remote_active{
+    
+    
+    right: 295px;
+}
+.active_remote_wrap{
+    margin-left: 10px;
+    width: 100%;
+    align-self: start;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+.active_remote{
+       /* width: 300px; */
+       border: 1px solid #ffffff;
+       border-radius: 7px;
+       height: 46px;
+       background-color: #252525;
+       color: white;
+       /* padding: 10px; */
+       display: flex;
+       /* align-items: center; */
+       padding: 6px;
+      
+       
+}
+.wrap_status{
+    background: #8d8d8d;
+    margin-bottom: 15px;
+    box-shadow: inset 0px -6px 2px -2px #00000026;
+}
+.plankChannel{
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+}
+.tab{
+    display: flex;
+    justify-content: space-between;
+    background: lightgrey;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 0 0 5px 1px #8f8f8f, inset 0 0 2px 1px #ffffff;
+}
+.tab_info{
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.open_remote{
+    border-radius: 10px;
+    background-color: #e7e7e7;
+    width: 280px;
+    height: 400px;
+    box-shadow: 0px 0px 0px 1px black, inset 0 0 2px 0px #ffffff, 2px 4px 0px 2px #252525;
+}
+
+.channel_remote{
+    border-radius: 10px;
+    margin-left: 15px;
+    background-color: rgb(37, 37, 37);
+    width: 280px;
+    height: 400px;
+    box-shadow: 0px 0px 0px 1px black, inset 0 0 2px 0px #fbfbfb70, 2px 4px 0px 2px #252525;
+    
+
+}
+.channel_remote_button{
+    display: flex;
+    justify-content: space-around;
+}
+.channel_remote_bar{
+    padding: 10px;
+    border-bottom: 2px solid #383838;
+    margin-bottom: 10px;
+}
+.open_remote_bar{
+    padding: 10px;
+    border-bottom: 2px solid #c9c9c9;
+    margin-bottom: 10px;
+}
+
+.tv{
+    box-shadow: -3px -3px 0px 1px #323232;
+    overflow: hidden;
+    border-radius: 7px;
+    background: #464646;
+    padding: 4px 4px 18px 4px;
+    width: 65px;
+    height: 62px;
+    min-width: 65px;
+}
+.tv img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+.cover_tv{
+    border-radius: 6px;
+    position: sticky;
+    width: 100%;
+    height: 100%;
+    /* top: 0; */
+    bottom: 0;
+    left: 0;
+    box-shadow: inset 0 0 13px 1px #000000;
+    animation-name: tv;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes tv {
+    from {
+        box-shadow: inset 0 0 13px 1px #000000;
+    }
+    50%{
+        box-shadow: inset 0 0 13px 3px #000000;
+    }
+    to {
+        box-shadow: inset 0 0 13px 1px #000000;
+    }
+}
+
+.bar_btn{
+    width: 30px;
+    height: 30px;
+}
+.bar_btn_black{
+    border: navajowhite;
+    background: #252525;
+    color: #e5e5e5;
+    box-shadow: 0 0 5px 1px #080808, inset 0 0 2px 1px #5e5e5e;
+    border-radius: 5px;
+}
+.bar_btn_white{
+    border: 1px solid #9d9d9d;
+    background: #d1d1d1;
+    color: #252525;
+    box-shadow: 0 0 5px 1px #8f8f8f, inset 0 0 2px 1px #ffffff;
+    border-radius: 5px;
+}
+.remote_panel{
+    background: #383838;
+    border-radius: 10px 10px 0 0px;
+    padding: 10px;
+    box-shadow: 0px 0px 0px 1px black, inset 0 0 2px 0px #fbfbfb70, 2px 4px 0px 2px #252525;
+    transition: all 4s ease;
+}
+.wrap_input_search{
+    padding: 0 10px;
+    width: 100%;
+}
+.search_youtube input{
+    width: 100%;
+    border-radius: 7px;
+    height: 30px;
+   
+}
+
+
+.wrap_remote_panel{
+    height: auto;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 10px 0;
+    
+    transition: height 4s ease;
+}
+.wrap_authPage{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+}
+.auth_input{
+    display: flex;
+    width: 100%;
+    padding: 35px;
+    flex-direction: column
+}
+.auth_input input{
+    width: inherit;
+    height: 34px;
+    border-radius: 10px;
+    border: 2px solid #efefef;
+    box-shadow: inset 0px 1px 4px #00000080;
+
+}
+.tab button{
+    background: none;
+    font-size: 20px;
+    color: #979191;
+    border: none;
+}
+.auth_input button{
+    align-self: self-end;
+    width: 70px;
+    background: #fdb140;
+    height: 24px;
+    border: 1px solid #bba61f;
+    box-shadow: 2px 3px 0 #cb9b13;
+    color: white;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.app_brums{
+    padding: 10px 10px 0 10px;
+    color: white;
+    font-size: 15px;
+    font-variant: all-small-caps;
+    /* box-shadow: -1px 11px 0 black; */
+    text-shadow: 1px 1px #176a81;
+}
+.control_panel{
+    display: flex;
+    justify-content: space-between;
+}
+.control_panel button{
+    color: white;
+}
+#links{
+    margin-bottom: 10px;
+}
+.mr-3{
+    margin-right: 10px;
+}
+.active_remote_signal{
+    padding: 10px;
+    align-items: center;
+    display: flex;
+}
+.button_remote{
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    background: #252525;
+    box-shadow: 0 0 5px 1px #080808, inset 0 0 5px 1px #4c4c4c;
+    border-radius: 5px;
+}
+.button_remote img{
+    width: inherit;
+}
+.youtube_btn{
+    min-width: 30px;
+}
+.d-flex{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.app_list_youtube_video {
+    display: flex;
+    height: 60px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid #45b5d3;
+}
+.app_list_youtube_video img{
+    /* width: 200px; */
+    object-fit: contain;
+    height: 100%;
+}
+
+
+.wrap_panel_youtube{
+    height: inherit;
+    display: flex;
+    FLEX-DIRECTION: column;
+}
+.app_list_youtube{
+    HEIGHT: 100%;
+    /* border: 2px solid #97dff3; */
+    overflow: auto;
+    border-radius: 10px;
+    margin: 10px;
+    /* background: #1a86a3; */
+    /* box-shadow: inset 0px 0px 3px 1px black; */
+    padding-right: 10px;
+}
+.listovelo{
+    min-height: 100%;
+    border: 2px solid #97dff3;
+    overflow: auto;
+    border-radius: 10px;
+    /* margin: 10px; */
+    background: #1a86a3;
+    box-shadow: inset 0px 0px 3px 1px black;
+    padding: 4px;
+}
+.button_youtube{
+    width: 100%;
+    border: none;
+    background: #ffffff;
+    color: #141414;
+    font-family: 'Roboto',sand-serif;
+    font-size: 12px;
+}
+
+
+.wrap_img_youtube{
+    height: inherit;
+}
+
+
+
+* {
+    scrollbar-width:thin;
+    scrollbar-color:  orange black;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 14px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #686868;
+    border: 2px solid #c9a216;
+    /* border-radius: 0px 7px 7px 0; */
+    box-shadow: inset 0 0 3px black;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #3a3a3a;
+    /* border-radius: 7px 7px 7px 7px; */
+    border: 2px solid #525252;
+    border-left: #101010;
+    border-top: none;
+    box-shadow: 0px 1px 1px #00000069;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* YandexMusic */
+
+.panel_yandex{
+    border-radius: 24px 3px 3px 3px;
+    margin: 15px;
+    height: calc(100% - 30px);
+    background: orange;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 1px 1px 5px 0px #ffffff, inset -2px -2px 3px 1px #cf6e1b, 4px 4px 0px 0px #bf6519, 8px 8px 0px 0px #b35c11;
+    border: 1px solid #a95600;
+}
+
+.panel_yandex_label{
+    padding: 5px;
+    color: white;
+    text-align: end;
+}
+
+
+
+.wrap_track_list{
+    padding: 0 15px;
+    height: inherit;
+    overflow: auto;
+    margin-right: 10px;
+    overflow-y: scroll;
+}
+.track_list{
+    background: white;
+    box-shadow: inset 0 0 3px 1px #5990c9;
+    padding: 5px;
+    min-height: 100%;
+}
+.track{
+    max-height: 50px;
+    overflow: hidden;
+    background: aliceblue;
+}
+
+.track_info{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.track_info_artist{
+    color: brown;
+    font-size: 12px;
+}
+.track_info_track{
+
+}
+.yandex_remote{
+    margin: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #89572c;
+}
+.yandex_remote_search_group{
+    margin-bottom: 8px;
+}
+.yandex_btn_group{
+    margin-bottom: 3PX;
+}
+.yandex_remote_search_group input{
+    text-align: center;
+    margin-right: 10px;
+    height: auto;
+    background: #f1f8ff;
+    border: 1px solid;
+    border-color: #bb7306;
+    /* color: black; */
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 0px 0 #99610b, inset 2px 2px 4px 1px #00000073;
+}
+
+.yandex_remote_btn{
+    background: orange;
+    color: white;
+    /* border-width: 0 1px 1px 0; */
+    border-color: #db7f63;
+    border-style: none;
+    /* border: 1px solid #0a0101; */
+    height: 40px;
+    width: 40px;
+    border-radius: 2px;
+    box-shadow: inset 1px 1px 5px 0 #ffffff9e, 
+        inset -2px -2px 2px 0 #935b07, 
+        2px 2px 0px 0 #a36b00, 
+        3px 3px 0 0 #874400;
+}
+.yandex_remote_btn__black{
+    background: #3e3e3d;
+    color: white;
+    /* border-width: 0 1px 1px 0; */
+    border-color: #ffffff;
+    border-style: none;
+    /* border: 1px solid #0a0101; */
+    height: 40px;
+    width: 40px;
+    border-radius: 2px;
+    box-shadow: inset 1px 1px 5px 0 #ffffff40, 
+        inset -2px -2px 2px 0 #201d1a, 
+        2px 2px 0px 0 #443f35, 
+        3px 3px 0 0 #121212;
+}
+
+.yandex_remote_btn_mini{
+    height: 30px;
+    width: 30px;
+}
+
+.yandex_remote_btn__red_mini {
+    background: red;
+    color: white;
+    /* border-width: 0 1px 1px 0; */
+    border-color: #db7f63;
+    border-style: none;
+    /* border: 1px solid #0a0101; */
+    height: 30px;
+    width: 30px;
+    border-radius: 2px;
+    box-shadow: inset 1px 1px 3px 0 #ffffff, inset -2px -2px 3px 0 #930707, 2px 2px 0px 0 #a30000, 3px 3px 0 0 #870000;
+}
+
+
+
+
+
+
+
+
+/* profile */
+
+.panel_profile{
+    height: 100%;
+    background: #3a3a3a;
+}
+
+.profile_bar{
+    padding: 10px;
+    align-items: center;
+    background-color: #8d8d8d;
+}
+.profile_bar button{
+    color: white;
+    font-size: x-large;
+    background: #30ad33;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius: 27px;
+    align-items: center;
+    justify-content: center;
+}
+.profile_list{
+    padding: 8px;
+}
+.profile_badge{
+    background: #e9e9e9;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 14px 0 #00000078;
+}
+.profile_bage_info{
+
+}
+.profile_bage_info .name{
+    margin-bottom: 5px;
+}
+.profile_bage_info .linkId{
+    color: brown;
+    font-size: medium;
+}
+.profile_bage_btn_bar{
+
+}
+.profile_bage_btn_bar button{
+    color: white;
+    background: #f53232;
+    height: 35px;
+    width: 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+}
+
+
+/* tiktok   */
+
+.panel_tiktok{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.panel_tiktok .cable{
+    margin-bottom: -125px;
+}
+.remote_tiktok{
+    background: linear-gradient(134deg, #d9d9d9, #cdcdcd,#6a6a6a);
+    border-radius: 49px;
+    padding: 15px;
+    box-shadow: 4px 4px 0 0px #6c6c6c, 8px 8px 20px 0 black;
+    width: 225px;
+    height: 225px;
+}
+.remote_tiktok_wrap_btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.remote_tiktok_wrap_btn .btn_row{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+
+}
+.tiktok_name{
+    color: #787878;
+}
+
+
+.remote_tiktok_btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: x-large;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.remote_tiktok_btn__red{
+    border: 1px solid #df8a8a;
+    background: radial-gradient(#bd0b0b, #ed7373);
+    color: white;
+    box-shadow: 2px 2px 0 1px #cd2020, 3px 3px 0 1px #323030;
+}
+.remote_tiktok_btn__white{
+    border: 1px solid #4a4a4a;
+    background: radial-gradient(#fbfbfb, #d7d7d7);
+    color: #2c2c2c;
+    box-shadow: 2px 2px 0 1px #939393, 3px 3px 0 1px #323030;
+}
+.remote_tiktok_btn__blue{
+    border: 1px solid #7cb0e5;
+    background: radial-gradient(#398ba1, #42a9c5);
+    color: white;
+    box-shadow: 2px 2px 0 1px #1983a1, 3px 3px 0 1px #122352;
+}
+.remote_tiktok_btn__dark{
+    border: 1px solid #7c7c7c;
+    background: radial-gradient(#625f5f, #2e2e2e);
+    color: white;
+    box-shadow: 2px 2px 0 1px #525252, 3px 3px 0 1px #000000;
+}
+
+
+
+/* welcome page */
+
+.panel_welcome{
+    padding: 15px;
+    background: aliceblue;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.welcome_message{
+    border-bottom: 1px solid black;
+}
+.welcome_message_title{
+    margin-bottom: 10px;
+}
+.welcome_message_subtitle{
+    color: #6e6e6e;
+}
+.welcome_payment{
+
+}
+.welcome_payment_cash{
+
+}
+.cash_msg{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.cash_methods{
+    display: flex;
+    justify-content: space-around;
+}
+.cash_methods_btn{
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    min-width: 103px;
+    border: none;
+    font-weight: 600;
+}
+.cash_methods_btn__blue{
+    background: rgb(89 125 255);
+    color: white;
+}
+.cash_methods_btn__orange{
+    background: #cf9835;
+    color: white;
+}
+
+.welcome_payment_crypto{
+
+}
+.crypto_msg{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.crypto_wallets{
+
+}
+.crypto_wallets_row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.crypto_wallets_img{
+    width: 30px;
+    height: 30px;
+}
+.crypto_wallets_address{
+
+}
+.crypto_wallets_btn button{
+    background: none;
+    border: none;
+    font-size: large;
+    color: #7e7e7e;
+}
+.welcome_contact{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* /shop  */
+
+
+.panel_shop{
+    background: whitesmoke;
+    height: inherit;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.reliased_app_img,.onbuild_app_img,.voited_app_img{
+    background: #999999;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.shop_title{
+    margin-bottom: 10px;
+}
+.voited_app{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.reliased_app_name,.onbuild_app_name{
+    font-size: smaller;
+    margin-top: 5px;
+    text-align: center;
+}
+.shop_realised_apps,.shop_onbuild_apps{
+    display: flex;
+}
+.reliased_app,.onbuild_app{
+    margin-right: 10px;
+}
+
+
+/* app info  */
+.app_info_wrap{
+    z-index: 999;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    padding: 15px;
+    background: #000000b8;
+}
+.app_info{
+    background: aliceblue;
+    padding: 15px;
+    height: -webkit-fill-available;
+    border-radius: 10px;
+}
+.app_info_btn_row{
+    display: flex;
+    justify-content: flex-end;
+}
+.app_info_btn_row button{
+    background: none;
+    border: none;
+    font-size: x-large;
+}
+
+
+
+.app_info_app{
+    display: flex;
+    margin-bottom: 10px;
+}
+.app_info_btn_add_row{
+    margin-bottom: 10px;
+}
+.app_info_app_img{
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.app_info_warning{
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.app_info_btn_add button{
+    background: #ff6666;
+    border: none;
+    padding: 8px;
+    width: 115px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+}
+
+
+
+
+.panel_auth{
+    height: inherit;
+    background-color: #363636;
+}
+.app_preview{
+    margin-top: -60px;
+}
+.logo{
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    height: 60px;
+}
+.text_logo{
+
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}

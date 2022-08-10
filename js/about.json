@@ -1,0 +1,89 @@
+{
+
+"platfotm":{
+    "en-US":"Platforms",
+    "ru-RU":"Платформы"
+},
+"channels":{
+    "en-US":"Channels",
+    "ru-RU":"Каналы"
+},
+"support":{
+    "en-US":"Support",
+    "ru-RU":"Поддержка"
+},
+"donate":{
+    "en-US":"Donation",
+    "ru-RU":"Пожервования"
+},
+"title":{
+    "en-US":"Use RemoteControl to watch love sites with distance",
+    "ru-RU":"Используйте RemoteControl чтобы смотреть любимые сервисы удаленно"
+},
+"action_btn":{
+    "en-US":"Get RemoteControl",
+    "ru-RU":"Установить RemoteControl"
+},
+"card_one_title":{
+    "en-US":"No TV when is PC",
+    "ru-RU":"Зачем ТВ когда есть ПК"
+},
+"card_one_text":{
+    "en-US":"Forger about tv! Now you can use your PC like TV.",
+    "ru-RU":"Забуть о ТВ! Теперь ты можешь использовать ПК как телевизор"
+},
+"card_2_title":{
+    "en-US":"No TV when is PC",
+    "ru-RU":"Зачем ТВ когда есть ПК"
+},
+"card_2_text":{
+    "en-US":"Forger about tv! Now you can use your PC like TV.",
+    "ru-RU":"Забуть о ТВ! Теперь ты можешь использовать ПК как телевизор"
+},
+"card_3_title":{
+    "en-US":"No TV when is PC",
+    "ru-RU":"Зачем ТВ когда есть ПК"
+},
+"card_3_text":{
+    "en-US":"Forger about tv! Now you can use your PC like TV.",
+    "ru-RU":"Забуть о ТВ! Теперь ты можешь использовать ПК как телевизор"
+},
+"channels_title":{
+    "en-US":"Soon",
+    "ru-RU":"Скоро"
+},
+"support_title":{
+    "en-US":"HOW IT USE ? IT’S EASY !",
+    "ru-RU":"КАК ПОЛЬЗОВАТЬСЯ ? ЭТО ЛЕГКО !"
+},
+"support_msg1":{
+    "en-US":"Install extension on your brower",
+    "ru-RU":"Установите расширение на свой браузер"
+},
+"support_msg2":{
+    "en-US":"Open on your smarphone the app",
+    "ru-RU":"Откройте на телефоне приложение"
+},
+"support_msg3":{
+    "en-US":"Put link in register page",
+    "ru-RU":"Вставте код при регистрации"
+},
+"support_msg4":{
+    "en-US":"Have fun with RemoteControl !",
+    "ru-RU":"Наслаждайте просмотром с RemoteControl !"
+},
+"contact_msg1":{
+    "en-US":"If your have any question or suggest you can",
+    "ru-RU":"Если у вас есть вопросы или предложения вы можете"
+},
+"contact_msg2":{
+    "en-US":"contact us",
+    "ru-RU":"связаться с нами"
+}
+
+
+
+
+
+
+}
