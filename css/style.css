@@ -513,7 +513,7 @@ button{
     font-size: 12px;
 }
 .track_info_track{
-
+    color: rgba(255, 255, 255, 0);
 }
 .yandex_remote{
     margin: 10px;
@@ -632,7 +632,7 @@ button{
     box-shadow: 0px 3px 14px 0 #00000078;
 }
 .profile_bage_info{
-
+    color: rgba(255, 255, 255, 0);
 }
 .profile_bage_info .name{
     margin-bottom: 5px;
@@ -642,7 +642,7 @@ button{
     font-size: medium;
 }
 .profile_bage_btn_bar{
-
+    color: rgba(255, 255, 255, 0);
 }
 .profile_bage_btn_bar button{
     color: white;
@@ -749,10 +749,10 @@ button{
     color: #6e6e6e;
 }
 .welcome_payment{
-
+    color: rgba(255, 255, 255, 0);
 }
 .welcome_payment_cash{
-
+    color: rgba(255, 255, 255, 0);
 }
 .cash_msg{
     margin-bottom: 10px;
@@ -780,14 +780,14 @@ button{
 }
 
 .welcome_payment_crypto{
-
+    color: rgba(255, 255, 255, 0);
 }
 .crypto_msg{
     margin-bottom: 10px;
     margin-top: 10px;
 }
 .crypto_wallets{
-
+    color: rgba(255, 255, 255, 0);
 }
 .crypto_wallets_row{
     display: flex;
@@ -802,7 +802,7 @@ button{
     height: 30px;
 }
 .crypto_wallets_address{
-
+    color: rgba(255, 255, 255, 0);
 }
 .crypto_wallets_btn button{
     background: none;

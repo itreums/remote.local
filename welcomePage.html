@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            
+        }
+
+        body,html{
+            font-family: 'Montserrat', sans-serif;
+            background-color: #040214;
+            height: 100%;
+            background-image: url(../assets/img/wave.svg);
+            background-size: cover;
+            background-position: bottom;
+            text-align: center;
+        }
+        .container{
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .container h1{
+            color: white;
+            font-size: 40px;
+        }
+        .info{
+            color: #8d8d8d;
+            font-size: x-large;
+            font-size: 32px;
+        }
+        #login{
+            color: #ffaf1d;
+            /* margin-left: 10px; */
+        }
+        .announce{
+            margin-bottom: 20px;
+        }
+        .main_logo{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 40px;
+            margin-top: -100px;
+        }
+        .main_logo img{
+            object-fit: contain;
+            width: inherit;
+        }
+        .warn{
+            color: white;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main_logo">
+            <img src="../assets/img/logo.svg" alt="">
+        </div>
+        <div class="announce">
+            <h1>Welcome to the Remote Control</h1>
+        </div>   
+        <div class="warn">
+            Open Rem.app on your phone
+            
+        </div>
+        <div class="info">
+            Your linkID: <span id="login"></span>
+            
+        </div>
+    </div>
+    
+</body>
+<script>
+    if(window.location.hash) {
+        console.log("Hash")
+        document.querySelector("#login").innerHTML=window.location.hash.replace('#',"")
+    } else {
+        console.log("no Hash")
+    }
+</script>
+</html>
